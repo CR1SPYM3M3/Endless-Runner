@@ -11,13 +11,12 @@ public class CameraMotor : MonoBehaviour
     private float transition = 0.0f;
     private float animationDuration = 2.0f;
     private Vector3 animationOffset = new Vector3(0,5,5);
-	// Use this for initialization
+
 	void Start () {
         lookAt = GameObject.FindGameObjectWithTag("Player").transform;
         startOffset = transform.position - lookAt.position;
     }
 	
-	// Update is called once per frame
 	void Update () {
         moveVector = lookAt.position + startOffset;
         transform.position = lookAt.position + startOffset;
